@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blackline Photography & Films</title>
+<meta name="description" content="Blackline Photography & Films — Wedding Photography, Couple Stories and Cinematic Films.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#090909;color:#f5f2ed;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+:root{--gold:#c8a46b;--cream:#f5f2ed;--muted:#a7a39c;--dark:#090909;--panel:#11110f}
+.hero{min-height:100vh;position:relative;display:flex;align-items:flex-end;overflow:hidden;background:#050505}
+.hero-bg{position:absolute;inset:0;background:url("images/01.jpg") center 30%/cover no-repeat;transform:scale(1.03);filter:brightness(.43) saturate(.85)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.08) 38%,rgba(0,0,0,.9) 100%)}
+.nav{position:absolute;top:0;left:0;right:0;padding:28px 6%;display:flex;justify-content:space-between;align-items:center;z-index:3;border-bottom:1px solid rgba(255,255,255,.08)}
+.logo{font-size:17px;letter-spacing:4px;font-weight:700}.logo span{display:block;font-size:9px;letter-spacing:3px;color:#bdb7ae;margin-top:5px}
+.navlinks{display:flex;gap:26px}.navlinks a{font-size:9px;letter-spacing:2px;color:#ddd;text-transform:uppercase}
+.hero-content{position:relative;z-index:2;padding:0 6% 8%;max-width:900px}
+.kicker{font-size:10px;letter-spacing:5px;color:#c8a46b;text-transform:uppercase;margin-bottom:20px}
+h1{font-family:Georgia,serif;font-size:clamp(52px,8vw,105px);font-weight:400;line-height:.9;letter-spacing:-4px}
+h1 i{color:#c8a46b}
+.hero p{max-width:590px;color:#d0cdc7;line-height:1.8;margin:27px 0;font-size:14px}
+.buttons{display:flex;gap:10px;flex-wrap:wrap}.btn{padding:14px 21px;border:1px solid rgba(255,255,255,.55);font-size:9px;letter-spacing:2px;text-transform:uppercase;transition:.25s}.btn:hover{border-color:var(--gold);color:var(--gold)}.btn.fill{background:#f5f2ed;color:#111;border-color:#f5f2ed}
+section{padding:95px 6%}
+.section-label{font-size:9px;letter-spacing:4px;color:#8f8b84;margin-bottom:14px;text-transform:uppercase}
+h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(36px,5vw,62px);line-height:1.02}
+.intro{max-width:680px;color:#9e9b95;line-height:1.85;font-size:14px;margin-top:18px}
+.gold{color:var(--gold)}
+.gallery{margin-top:48px;display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+.card{position:relative;overflow:hidden;background:#151515;min-height:340px}
+.card:nth-child(1){grid-column:span 5;min-height:650px}.card:nth-child(2){grid-column:span 7}.card:nth-child(3){grid-column:span 7}.card:nth-child(4){grid-column:span 5}.card:nth-child(5){grid-column:span 12;min-height:540px}
+.card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s,filter .8s}.card:hover img{transform:scale(1.045);filter:saturate(1.05)}
+.caption{position:absolute;left:0;right:0;bottom:0;padding:55px 20px 18px;background:linear-gradient(transparent,rgba(0,0,0,.88));font-size:9px;letter-spacing:3px}
+.services{background:#eeeae3;color:#161513}.services .section-label{color:#77736d}.services .intro{color:#65615b}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#cbc6bd;margin-top:45px}
+.service{background:#eeeae3;padding:32px 22px;min-height:190px}.service b{font-family:Georgia,serif;font-size:23px;font-weight:400;color:#aaa}.service h3{font-size:14px;margin:22px 0 8px}.service p{font-size:11px;line-height:1.6;color:#666}
+.pricing{background:#0d0d0c}.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:45px}
+.price-card{border:1px solid #292824;padding:34px 26px;min-height:310px;position:relative}.price-card.featured{border-color:#8c7047}.price-card .tag{font-size:8px;letter-spacing:3px;color:var(--gold)}.price-card h3{font-family:Georgia,serif;font-weight:400;font-size:28px;margin:15px 0}.price{font-size:13px;color:#aaa;margin-bottom:24px}.price-card ul{list-style:none;color:#aaa;font-size:11px;line-height:2}.price-card li:before{content:"✦";color:var(--gold);margin-right:8px}.price-card .btn{position:absolute;bottom:25px;left:26px}
+.reviews{background:#151513}.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:45px}.review{padding:30px;border:1px solid #292824;background:#10100f}.stars{color:var(--gold);letter-spacing:3px;font-size:12px}.review p{color:#b4b0a9;font-family:Georgia,serif;font-size:17px;line-height:1.6;margin:18px 0}.review b{font-size:10px;letter-spacing:2px;color:#eee}
+.booking{background:#f0ede7;color:#151513}.booking .section-label{color:#777}.booking .intro{color:#67635d}
+.form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:45px;margin-top:45px}.booking-form{display:grid;gap:12px}.booking-form input,.booking-form select,.booking-form textarea{width:100%;padding:15px;border:1px solid #cbc6bd;background:#f7f4ee;font:12px Arial;color:#222;outline:none}.booking-form textarea{min-height:130px;resize:vertical}.booking-form input:focus,.booking-form select:focus,.booking-form textarea:focus{border-color:#9c7947}.booking-note{font-size:10px;color:#777;line-height:1.7}
+.contact{text-align:center;background:#090909}.contact .intro{margin:18px auto}.phone{font-family:Georgia,serif;font-size:25px;margin-top:12px}.phone a:hover{color:var(--gold)}
+.address{margin:20px auto 0;color:#999;font-size:12px;line-height:1.8}.map-btn{display:inline-block;margin-top:20px;font-size:9px;letter-spacing:2px;color:var(--gold);border-bottom:1px solid #5c4a31;padding-bottom:6px}
+.insta{display:inline-block;margin-top:25px;font-size:10px;letter-spacing:2px;border-bottom:1px solid #555;padding-bottom:7px}
+footer{padding:35px 6%;background:#050505;text-align:center;color:#777;font-size:9px;letter-spacing:2px}
+@media(max-width:800px){section{padding:70px 5%}.nav{padding:22px 5%}.navlinks{display:none}.hero-content{padding:0 5% 12%}.gallery{display:block}.card,.card:nth-child(n){min-height:460px;margin-bottom:10px}.service-grid,.price-grid,.review-grid,.form-wrap{grid-template-columns:1fr 1fr}.service{min-height:155px;padding:22px 15px}}
+@media(max-width:520px){.service-grid,.price-grid,.review-grid,.form-wrap{grid-template-columns:1fr}.price-card{min-height:300px}}
+</style>
+</head>
+<body>
+<header class="hero" id="home">
+<div class="hero-bg"></div>
+<nav class="nav">
+<div class="logo">BLACKLINE<span>PHOTOGRAPHY &amp; FILMS</span></div>
+<div class="navlinks">
+<a href="#portfolio">Portfolio</a><a href="#pricing">Packages</a><a href="#reviews">Reviews</a><a href="#booking">Book</a><a href="#contact">Contact</a>
+</div>
+</nav>
+<div class="hero-content">
+<div class="kicker">Wedding · Couple · Cinematic</div>
+<h1>We capture<br><i>your story.</i></h1>
+<p>Elegant wedding photography and cinematic films crafted around real emotions, beautiful details and unforgettable moments.</p>
+<div class="buttons">
+<a class="btn fill" href="#booking">Check Your Date</a>
+<a class="btn" target="_blank" href="https://www.instagram.com/blackline_photography_and_film/">View Instagram ↗</a>
+</div>
+</div>
+</header>
+
+<section id="portfolio">
+<div class="section-label">01 — Selected Work</div>
+<h2>Stories worth<br>remembering.</h2>
+<p class="intro">A glimpse into our wedding stories — real emotions, timeless portraits and cinematic moments captured by Blackline Photography &amp; Films.</p>
+<div class="gallery">
+<div class="card"><img src="images/01.jpg" alt="Wedding bride portrait"><div class="caption">BRIDAL PORTRAITS</div></div>
+<div class="card"><img src="images/010.jpg" alt="Bridal portrait"><div class="caption">BRIDAL STORIES</div></div>
+<div class="card"><img src="images/044.jpg" alt="Wedding couple portrait"><div class="caption">COUPLE MOMENTS</div></div>
+<div class="card"><img src="images/055.jpg" alt="Wedding couple portrait"><div class="caption">CINEMATIC COUPLES</div></div>
+<div class="card"><img src="images/DSC05415-2.jpg" alt="Bride wedding portrait"><div class="caption">WEDDING DETAILS</div></div>
+</div>
+</section>
+
+<section class="services" id="services">
+<div class="section-label">02 — Services</div>
+<h2>Crafted for<br><span class="gold">your story.</span></h2>
+<p class="intro">From the quiet bridal details to the biggest celebrations, we document your wedding with a cinematic eye and an honest approach.</p>
+<div class="service-grid">
+<div class="service"><b>01</b><h3>Wedding Photography</h3><p>Authentic emotions, portraits and timeless wedding moments.</p></div>
+<div class="service"><b>02</b><h3>Cinematic Films</h3><p>A story-driven wedding film made to feel like your day again.</p></div>
+<div class="service"><b>03</b><h3>Couple &amp; Pre-Wedding</h3><p>Natural, romantic and editorial portraits with your personality.</p></div>
+<div class="service"><b>04</b><h3>Outdoor Stories</h3><p>Beautiful locations, natural light and relaxed frames.</p></div>
+</div>
+</section>
+
+<section class="pricing" id="pricing">
+<div class="section-label">03 — Packages</div>
+<h2>Choose your<br><span class="gold">experience.</span></h2>
+<p class="intro">Packages can be customised around your wedding. Contact us for the exact quotation and availability.</p>
+<div class="price-grid">
+<div class="price-card"><div class="tag">ESSENTIAL</div><h3>Wedding</h3><div class="price">Custom quotation</div><ul><li>Wedding photography</li><li>Selected edited photographs</li><li>Online gallery</li><li>Personal consultation</li></ul><a class="btn" href="#booking">Enquire</a></div>
+<div class="price-card featured"><div class="tag">POPULAR</div><h3>Wedding + Film</h3><div class="price">Custom quotation</div><ul><li>Wedding photography</li><li>Cinematic wedding film</li><li>Edited photographs</li><li>Online gallery</li></ul><a class="btn fill" href="#booking">Enquire</a></div>
+<div class="price-card"><div class="tag">COUPLE</div><h3>Pre-Wedding</h3><div class="price">Custom quotation</div><ul><li>Couple photo session</li><li>Location-based shoot</li><li>Creative direction</li><li>Edited final gallery</li></ul><a class="btn" href="#booking">Enquire</a></div>
+</div>
+</section>
+
+<section class="reviews" id="reviews">
+<div class="section-label">04 — Client Love</div>
+<h2>Words from<br><span class="gold">our couples.</span></h2>
+<p class="intro">A dedicated space for your real client testimonials. Replace the sample text below with your actual reviews anytime.</p>
+<div class="review-grid">
+<div class="review"><div class="stars">★★★★★</div><p>“The moments felt natural, emotional and beautifully captured. Every photograph brought the day back to life.”</p><b>— WEDDING COUPLE</b></div>
+<div class="review"><div class="stars">★★★★★</div><p>“From the first conversation to the final photographs, the experience felt personal and effortless.”</p><b>— HAPPY COUPLE</b></div>
+<div class="review"><div class="stars">★★★★★</div><p>“The cinematic feel and attention to small details made our wedding memories truly special.”</p><b>— BLACKLINE CLIENT</b></div>
+</div>
+</section>
+
+<section class="booking" id="booking">
+<div class="section-label">05 — Booking</div>
+<h2>Let's plan<br>your <span class="gold">date.</span></h2>
+<p class="intro">Send us your event details. The form opens WhatsApp with your enquiry, so you can contact us directly without needing a paid form service.</p>
+<div class="form-wrap">
+<form class="booking-form" onsubmit="sendWhatsApp(event)">
+<input id="name" required placeholder="Your Name">
+<input id="phone" required placeholder="Mobile Number">
+<input id="date" type="date" required>
+<select id="event" required><option value="">Select Event</option><option>Wedding Photography</option><option>Wedding + Cinematic Film</option><option>Pre-Wedding</option><option>Couple Shoot</option><option>Other</option></select>
+<textarea id="message" placeholder="Tell us about your event, venue, number of days, etc."></textarea>
+<button class="btn fill" type="submit">Send Enquiry on WhatsApp ↗</button>
+</form>
+<div>
+<div class="section-label">Booking information</div>
+<h3 style="font-family:Georgia,serif;font-size:28px;font-weight:400;line-height:1.25">Your date.<br>Your story.<br>Your memories.</h3>
+<p class="booking-note" style="margin-top:18px">Please share your preferred date and event type. We will contact you with availability and package details.</p>
+<p class="booking-note" style="margin-top:18px"><b>Phone:</b> +91 95795 68844<br><b>Alternate:</b> +91 98810 47161</p>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="section-label">06 — Contact</div>
+<h2>Let's create<br><span class="gold">something beautiful.</span></h2>
+<p class="intro">For wedding bookings, pre-wedding shoots and cinematic films, get in touch with Blackline Photography &amp; Films.</p>
+<div class="phone"><a href="tel:+919579568844">+91 95795 68844</a></div>
+<div class="phone"><a href="tel:+919881047161">+91 98810 47161</a></div>
+<div class="address"><b>Suganga Nagar, Savda</b><br>Tal-Raver, Dist-Jalgaon, Maharashtra</div>
+<a class="map-btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Suganga+Nagar%2C+Savda%2C+Tal-Raver%2C+Dist-Jalgaon%2C+Maharashtra">OPEN LOCATION IN GOOGLE MAPS ↗</a>
+<div class="buttons" style="justify-content:center;margin-top:28px">
+<a class="btn fill" href="https://wa.me/919579568844?text=Hello%20Blackline%20Photography%20%26%20Films%2C%20I%20want%20to%20book%20a%20date." target="_blank">WhatsApp</a>
+<a class="btn" href="tel:+919579568844">Call Now</a>
+</div>
+<a class="insta" target="_blank" href="https://www.instagram.com/blackline_photography_and_film/">@blackline_photography_and_film ↗</a>
+</section>
+
+<footer>© 2026 BLACKLINE PHOTOGRAPHY &amp; FILMS · CAPTURING MOMENTS · CREATING MEMORIES</footer>
+<script>
+function sendWhatsApp(e){
+ e.preventDefault();
+ const name=document.getElementById("name").value.trim();
+ const phone=document.getElementById("phone").value.trim();
+ const date=document.getElementById("date").value;
+ const event=document.getElementById("event").value;
+ const message=document.getElementById("message").value.trim();
+ const text=`Hello Blackline Photography & Films,%0A%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0AEvent: ${encodeURIComponent(event)}%0ADate: ${encodeURIComponent(date)}%0AMessage: ${encodeURIComponent(message)}`;
+ window.open("https://wa.me/919579568844?text="+text,"_blank");
+}
+</script></body>
+</html>
